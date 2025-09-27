@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\UluKasokController;
 use App\Models\Post;
 use App\Models\Comment;
@@ -26,6 +27,8 @@ Route::get('/kontak', [UluKasokController::class, 'viewKontak'])->name('view-kon
 Route::get('/informasi', [UluKasokController::class, 'viewInformasi'])->name('view-informasi');
 
 Route::get('/user/ticket/{order:invoice_number}', [UluKasokController::class, 'viewDetailTicket'])->name('view-detail-ticket');
+
+Route::post('/user/payment/callback', [PaymentController::class, 'handleCallback'])->name('payment.callback');
 
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
 Route::get('/blogs/create', [BlogController::class, 'create'])->name('blogs.create');
