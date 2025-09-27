@@ -77,7 +77,7 @@ class UluKasokController extends Controller
                     ]);
                 }
             catch (\Exception $e) {
-                echo $e->getMessage();
+                $snap_token = '';
             }
 
         }
