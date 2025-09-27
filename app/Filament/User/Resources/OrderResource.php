@@ -146,7 +146,16 @@ class OrderResource extends Resource
                 ->color('success')
                 ->action(function ($record) {
                     return redirect()->route('view-detail-ticket', $record->invoice_number);
-                }),
+                })
+                ->visible(fn (Order $record) => $record->payment_status === 'pending'),
+                Tables\Actions\Action::make('view')
+                ->label('View')
+                ->icon('heroicon-o-eye')
+                ->color('gray')
+                ->action(function ($record) {
+                    return redirect()->route('view-detail-ticket', $record->invoice_number);
+                })
+                ->visible(fn (Order $record) => $record->payment_status === 'success'),
             ])
             ->bulkActions([
                 //
@@ -172,11 +181,6 @@ class OrderResource extends Resource
         ];
     }
 
-    protected function getHeaderActions(): array
-    {
-        return []; // kosongkan
-    }
-
     public static function getRelations(): array
     {
         return [
@@ -189,6 +193,7 @@ class OrderResource extends Resource
         return [
             'index' => Pages\CreateOrder::route('/create'),
             'list' => Pages\ListOrders::route('/list-order'),
+            'view' => Pages\ViewOrder::route('/view/{record}'),
         ];
     }
 }
