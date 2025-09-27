@@ -28,8 +28,8 @@
                                 <p class="text-2xl font-semibold text-gray-900">Rp
                                     {{ number_format($order->total_amount, 0, ',', '.') }}</p>
                                 <span
-                                    class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 mt-1">
-                                    Pending
+                                    class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium {{ $order->payment_status == 'pending' ? 'bg-yellow-100 text-yellow-800' : 'bg-green-100 text-green-800' }} mt-1">
+                                    {{ ucfirst($order->payment_status) }}
                                 </span>
                             </div>
                         </div>
@@ -46,17 +46,17 @@
 
                             <div class="space-y-3">
                                 <div class="flex justify-between text-gray-600">
-                                    <span>Subtotal</span>
-                                    <span>Rp {{ number_format($order->total_amount, 0, ',', '.') }}</span>
-                                </div>
-                                {{-- <div class="flex justify-between text-gray-600">
-                                    <span>Biaya Admin</span>
-                                    <span>Rp25.000</span>
+                                    <span>Tiket {{ $order->orderItem->product->product_name }}</span>
+                                    <span>Rp {{ number_format($order->orderItem->product->price, 0, ',', '.') }}</span>
                                 </div>
                                 <div class="flex justify-between text-gray-600">
-                                    <span>Diskon</span>
-                                    <span class="text-green-600">-Rp50.000</span>
-                                </div> --}}
+                                    <span>Quantity</span>
+                                    <span>{{ $order->orderItem->quantity }}</span>
+                                </div>
+                                <div class="flex justify-between text-gray-600">
+                                    <span>Subtotal</span>
+                                    <span>{{ number_format($order->total_amount, 0, ',', '.') }}</span>
+                                </div>
                                 <hr class="border-gray-300">
                                 <div class="flex justify-between text-lg font-semibold text-gray-900">
                                     <span>Total</span>
