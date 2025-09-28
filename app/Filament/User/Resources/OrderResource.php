@@ -193,7 +193,6 @@ class OrderResource extends Resource
         return [
             'index' => Pages\CreateOrder::route('/create'),
             'list' => Pages\ListOrders::route('/list-order'),
-            'view' => Pages\ViewOrder::route('/view/{record}'),
         ];
     }
 }
