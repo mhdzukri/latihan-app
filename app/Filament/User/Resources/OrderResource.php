@@ -29,7 +29,7 @@ class OrderResource extends Resource
 
     protected static ?string $label = 'Ticket';
 
-    protected static ?string $slug = 'ticket';
+    protected static ?string $slug = 'tickets';
 
     public $snap_token;
 
