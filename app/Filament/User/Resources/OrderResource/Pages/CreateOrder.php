@@ -14,11 +14,6 @@ class CreateOrder extends CreateRecord
     protected $quantity;
     protected $price;
 
-    public function getBreadcrumbs(): array
-    {
-        return [];
-    }
-
     public function getTitle(): string
     {
         return 'Buy Tickets';
