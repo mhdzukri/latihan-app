@@ -7,6 +7,7 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\UluKasokController;
 use App\Models\Post;
 use App\Models\Comment;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,13 @@ Route::post('/blogs', [BlogController::class, 'store'])->name('blogs.store');
 Route::get('/blogs/{id}', [BlogController::class, 'edit'])->name('blogs.edit');
 Route::put('/blogs/{id}', [BlogController::class, 'update'])->name('blogs.update');
 Route::delete('/blogs/{id}', [BlogController::class, 'destroy'])->name('blogs.destroy');
+
+Route::get('/storage-link', function () {
+    // Run artisan command
+    Artisan::call('storage:link');
+
+    return response()->json([
+        'message' => 'Storage link created successfully.',
+        'output'  => Artisan::output(),
+    ]);
+})->name('storage.link');
