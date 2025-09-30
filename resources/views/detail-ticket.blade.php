@@ -154,7 +154,7 @@
             document.getElementById('pay-button').onclick = function() {
                 snap.pay('{{ $snap_token }}', {
                     onSuccess: function(result) {
-                        window.location.href = "{{ url('user/ticket/list-order') }}"
+                        window.location.href = "{{ url('user/tickets/list-order') }}"
                     },
                     onPending: function(result) {},
                     onError: function(result) {}
