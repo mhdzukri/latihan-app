@@ -1,14 +1,14 @@
 @component('layout', ['title' => 'Ulu Kasok - Informasi'])
     @include('navbar')
 
-    <section>
-        <div class="max-w-5xl mx-auto space-y-20">
-            <div>
-                <img src="{{ asset('assets/img/hero-informasi.png') }}" alt="photo_ulu_kasok">
-            </div>
+    <section class="mt-15">
+        <div class="mb-5">
+            <img src="{{ asset('assets/img/hero-informasi.png') }}" alt="photo_ulu_kasok">
+        </div>
+        <div class="w-xs sm:w-sm md:w-3xl lg:w-5xl max-w-5xl mx-auto space-y-5 md:space-y-20">
             <div class="space-y-5">
                 <h1 class="text-center text-[#142e50] montserrat font-bold text-3xl">Tentang Ulu Kasok</h1>
-                <div class="grid grid-cols-2 gap-15 mb-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-15 mb-10">
                     <p class="text-justify text-lg text-gray-600 open-sans">Ulu Kasok memiliki akar yang dalam dalam sejarah
                         dan
                         budaya yang
@@ -36,7 +36,7 @@
 
             <div class="space-y-5">
                 <h1 class="text-center text-[#142e50] montserrat font-bold text-3xl">Tiket & Fasilitas</h1>
-                <div class="grid grid-cols-2 gap-15 mb-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-15 mb-10">
                     <div
                         class="bg-linear-to-t from-[#2E69B6] to-[#142E50] rounded-2xl text-white text-center montserrat font-bold space-y-5 py-5">
                         <h2 class="text-3xl">WeekDay</h2>
@@ -50,7 +50,7 @@
                         <p class="font-normal">Sabtu - Minggu</p>
                     </div>
                 </div>
-                <div class="grid grid-cols-3 gap-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                     <div class="rounded-3xl font-bold py-10 shadow-xl space-y-5 text-gray-600">
                         <h4 class="text-[#142E50] text-2xl text-center">Fasilitas Alam</h4>
                         <ul class="list-disc ml-12">
@@ -79,7 +79,7 @@
 
             <div class="space-y-5 mb-20">
                 <h1 class="text-center text-[#142e50] montserrat font-bold text-3xl">Lokasi</h1>
-                <div id="map" class="max-w-5xl" style="height: 30rem;"></div>
+                <div id="map" class="max-w-5xl z-10" style="height: 30rem;"></div>
             </div>
         </div>
     </section>

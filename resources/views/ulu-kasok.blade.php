@@ -6,7 +6,7 @@
         <div class="md:w-3xl lg:w-5xl max-w-5xl mx-auto mt-15">
             <div class="relative">
                 <div class="absolute w-full h-full flex flex-col items-center justify-center space-y-10 bg-black/40">
-                    <h1 class="montserrat w-sm md:w-full text-3xl text-center lg:text-4xl text-white font-bold">Mulai
+                    <h1 class="montserrat w-xs sm:w-sm md:w-full text-3xl text-center lg:text-4xl text-white font-bold">Mulai
                         Petualanganmu Dari
                         Puncak</h1>
                     <img src="{{ asset('assets/img/ulu-kasok.png') }}" alt="ulu-kasok" class="w-80 lg:w-100">
@@ -30,7 +30,7 @@
 
 <!-- Tingkatkan Pengalaman -->
 <section>
-    <div class="w-sm md:w-3xl lg:w-5xl max-w-5xl mx-auto my-10">
+    <div class="w-xs sm:w-sm md:w-3xl lg:w-5xl max-w-5xl mx-auto my-10">
         <h1 class="text-center text-3xl montserrat text-[#142e50] font-bold">Tingkatkan Pengalaman Liburan Anda di
             Ulu Kasok</h1>
         <p class="text-center text-[#696969] mt-5 mb-10">Jelajahi Keindahan Ulu Kasok
@@ -60,7 +60,7 @@
 
 <!-- Testimoni Wisatawan -->
 <section class="bg-[#eee]">
-    <div class="w-sm md:w-3xl lg:w-5xl max-w-5xl mx-auto bg-[#eeeeee] py-10">
+    <div class="w-xs sm:w-sm md:w-3xl lg:w-5xl max-w-5xl mx-auto bg-[#eeeeee] py-10">
         <h1 class="text-center text-3xl montserrat text-[#142e50] font-bold mb-10">Pengalaman Wisatawan Di Ulu Kasok
         </h1>
 

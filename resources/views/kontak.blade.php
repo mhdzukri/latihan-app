@@ -1,61 +1,67 @@
 @component('layout', ['title' => 'Ulu Kasok - Kontak'])
     @include('navbar')
 
-    <section class="mb-[-100px]">
-        <div class="relative max-w-5xl mx-auto">
+    <section class="mt-15 md:mb-[-100px] mb-5">
+        <div class="relative w-xs sm:w-sm md:w-3xl lg:w-5xl max-w-5xl mx-auto">
             <div class="relative">
                 <!-- Hero Section -->
-                <div class="absolute w-full text-center mb-12 animate-fade-in-down pt-25 z-5">
-                    <h1 class="text-5xl font-bold text-white mb-6 drop-shadow-lg montserrat ">
+                <div class="md:absolute w-full text-center mb-12 animate-fade-in-down pt-10 md:pt-25 z-10">
+                    <h1
+                        class="text-5xl font-bold text-[#142e50] md:text-white mb-6 drop-shadow-lg montserrat hidden md:block ">
                         Hubungi Kami
                     </h1>
-                    <p class="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+                    <p class="text-xl text-[#142e50] md:text-white/90 max-w-2xl mx-auto leading-relaxed">
                         Kami siap memberikan solusi yang tepat sesuai <br> kebutuhan anda
                     </p>
                 </div>
                 <!-- Background Image -->
-                <img src="{{ asset('assets/img/hero-kontak.png') }}" alt="Customer Service Background" class="inset-0 ">
+                <img src="{{ asset('assets/img/hero-kontak.png') }}" alt="Customer Service Background"
+                    class="inset-0  hidden md:inline-block">
 
                 <!-- Blue Overlay with Transparency -->
-                <div class="absolute inset-0 bg-gradient-to-br from-slate-700/80 via-blue-900/70 to-blue-800/80"></div>
+                <div
+                    class="md:absolute  hidden md:block inset-0 bg-gradient-to-br from-slate-700/80 via-blue-900/70 to-blue-800/80">
+                </div>
             </div>
 
             <!-- Main Content Card -->
             <div
-                class="relative top-[-160px] w-full bg-white/95 rounded-[50px] shadow-2xl overflow-hidden animate-fade-in-up">
-                <div class="grid lg:grid-cols-5 gap-0">
+                class="relative md:top-[-160px] w-full bg-white/95 rounded-xl md:rounded-[50px] shadow-2xl overflow-hidden animate-fade-in-up">
+                <div class="grid grid-cols-1 md::grid-cols-5 gap-0">
 
                     <!-- Contact Information -->
-                    <div class="col-span-2 p-8 md:p-12 bg-gradient-to-br from-slate-50 to-gray-100">
+                    <div class="md:col-span-2 p-8 md:p-12 bg-gradient-to-br from-slate-50 to-gray-100">
                         <h2 class="text-2xl font-bold text-gray-800 mb-8">Hubungi Kami</h2>
 
                         <!-- Email -->
                         <div class="flex items-center mb-8 group">
                             <div
-                                class="w-14 h-14 bg-[#142e50] rounded-full flex items-center justify-center mr-6  transition-colors duration-300">
-                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                class="w-10 h-10 md:w-14 md:h-14 bg-[#142e50] rounded-full flex items-center justify-center mr-3 md:mr-6  transition-colors duration-300">
+                                <svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-semibold text-gray-800 text-lg mb-1">Email</h3>
-                                <p class="text-gray-600 text-lg">ulukasok1357@gmail.com</p>
+                                <h3 class="font-semibold text-gray-800 text-base md:text-lg mb-1">Email</h3>
+                                <p class="text-gray-600 text-base md:text-lg">ulukasok1357@gmail.com</p>
                             </div>
                         </div>
 
                         <!-- Phone -->
                         <div class="flex items-center mb-8 group">
                             <div
-                                class="w-14 h-14 bg-[#142e50] rounded-full flex items-center justify-center mr-6  transition-colors duration-300">
-                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                class="w-10 h-10 md:w-14 md:h-14 bg-[#142e50] rounded-full flex items-center justify-center mr-3 md:mr-6  transition-colors duration-300">
+                                <svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-semibold text-gray-800 text-lg mb-1">Telepon</h3>
-                                <p class="text-gray-600 text-lg">+62 812 3456 7890</p>
+                                <h3 class="font-semibold text-gray-800 text-base md:text-lg mb-1">Telepon</h3>
+                                <p class="text-gray-600 text-base md:text-lg">+62 812 3456 7890</p>
                             </div>
                         </div>
 
@@ -111,7 +117,7 @@
                     </div>
 
                     <!-- Contact Form -->
-                    <div class="col-span-3 p-8 md:p-12 bg-white">
+                    <div class="md:col-span-3 p-8 md:p-12 bg-white">
                         <h2 class="text-2xl font-bold text-gray-800 mb-8">Kirim Kami Pesan</h2>
 
                         <form class="space-y-6">
@@ -119,7 +125,7 @@
                             <div>
                                 <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Nama</label>
                                 <input type="text" id="name" name="name"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-xl transition-all duration-300 text-lg"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-xl transition-all duration-300 text-base md:text-lg"
                                     placeholder="Masukkan nama lengkap Anda" required>
                             </div>
 
@@ -129,14 +135,14 @@
                                     <label for="email"
                                         class="block text-sm font-semibold text-gray-700 mb-2">Email</label>
                                     <input type="email" id="email" name="email"
-                                        class="w-full px-4 py-2 border border-gray-300 rounded-xl transition-all duration-300 text-lg"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-xl transition-all duration-300 text-base md:text-lg"
                                         placeholder="email@example.com" required>
                                 </div>
                                 <div>
                                     <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">No
                                         HP</label>
                                     <input type="tel" id="phone" name="phone"
-                                        class="w-full px-4 py-2 border border-gray-300 rounded-xl transition-all duration-300 text-lg"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-xl transition-all duration-300 text-base md:text-lg"
                                         placeholder="+62 xxx xxx xxxx">
                                 </div>
                             </div>
@@ -145,13 +151,13 @@
                             <div>
                                 <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Pesan</label>
                                 <textarea id="message" name="message" rows="4"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-xl transition-all duration-300 text-lg resize-none"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-xl transition-all duration-300 text-base md:text-lg resize-none"
                                     placeholder="Tulis pesan Anda di sini..." required></textarea>
                             </div>
 
                             <!-- Submit Button -->
                             <button type="submit"
-                                class="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg transform hover:scale-102 hover:shadow-lg active:scale-98">
+                                class="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-2 md:py-4 px-8 rounded-xl transition-all duration-300 text-lg transform hover:scale-102 hover:shadow-lg active:scale-98">
                                 Kirim Pesan
                             </button>
                         </form>

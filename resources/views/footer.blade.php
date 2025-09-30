@@ -1,6 +1,6 @@
     <!-- Footer -->
     <footer class="bg-[#142e50]">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 w-sm md:w-3xl lg:w-5xl max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 w-xs sm:w-sm md:w-3xl lg:w-5xl max-w-5xl mx-auto">
             <div class="flex flex-col items-center grid-row-3 py-10">
                 <div class="px-13 mb-8">
                     <img src="{{ asset('assets/img/ulu-kasok.png') }}" alt="logo" class="w-60 md:w-80">
