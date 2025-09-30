@@ -1,9 +1,9 @@
     <!-- Footer -->
     <footer class="bg-[#142e50]">
-        <div class="grid grid-cols-3 gap-10 max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 w-sm md:w-3xl lg:w-5xl max-w-5xl mx-auto">
             <div class="flex flex-col items-center grid-row-3 py-10">
                 <div class="px-13 mb-8">
-                    <img src="assets/img/ulu-kasok.png" alt="logo" class="">
+                    <img src="{{ asset('assets/img/ulu-kasok.png') }}" alt="logo" class="w-60 md:w-80">
                 </div>
                 <div class="mb-20 flex justify-between w-full text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="size-7 "
@@ -38,7 +38,7 @@
                 </div>
                 <div class="text-white">2025 &copy; Ulu Kasok</div>
             </div>
-            <div class="col-span-2 flex justify-between space-x-5 ml-10">
+            <div class="col-span-2 hidden md:flex justify-between space-x-5 ml-10">
                 <div class="py-15 text-center w-fit space-y-3">
                     <h4 class="text-[#55C3EA] text-xl font-bold mb-5">Wisata</h4>
                     <p><a href="#" class="text-white font-bold text-sm">Spot & Panorama</a></p>

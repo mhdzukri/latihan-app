@@ -22,6 +22,11 @@
             --font-montserrat: 'Montserrat', sans-serif;
             --font-open-sans: 'Open Sans', sans-serif;
         }
+
+        html {
+            padding-right: 0px !important;
+            overflow-y: auto !important;
+        }
     </style>
     <title>{{ $title }}</title>
 </head>
