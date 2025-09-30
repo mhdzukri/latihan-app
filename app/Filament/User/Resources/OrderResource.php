@@ -169,14 +169,14 @@ class OrderResource extends Resource
                 ->url(static::getUrl('index'))
                 ->icon('heroicon-o-ticket')
                 ->group('Transaction')
-                ->isActiveWhen(fn () => request()->is('user/ticket/create'))
+                ->isActiveWhen(fn () => request()->is('user/tickets/create'))
                 ->label('Ticket'),
 
             NavigationItem::make('List Order')
                 ->url(static::getUrl('list'))
                 ->icon('heroicon-o-shopping-cart')
                 ->group('Transaction')
-                ->isActiveWhen(fn () => request()->is('user/ticket/list-order'))
+                ->isActiveWhen(fn () => request()->is('user/tickets/list-order'))
                 ->label('List Orders'),
         ];
     }
