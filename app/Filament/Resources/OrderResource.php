@@ -41,16 +41,30 @@ class OrderResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('order_date')
+                Tables\Columns\TextColumn::make('orderItem.product.product_name')
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('date_of_visit')
                     ->date()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('orderItem.products.product_name')
-                    ->sortable(),
+                Tables\Columns\TextColumn::make('ticket_status')
+                    ->label('Ticket Status')
+                    ->badge()
+                    ->colors([
+                        'success' => 'tersedia',
+                        'danger'  => 'terpakai',
+                    ])
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('payment_status')
+                    ->badge()
+                    ->colors([
+                        'warning' => 'pending',
+                        'success' => 'success',
+                        'danger'  => 'canceled',
+                    ])
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('total_amount')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('payment_status')
-                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -64,7 +78,10 @@ class OrderResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\EditAction::make(),
+                    Tables\Actions\DeleteAction::make(),
+                ]),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
