@@ -33,6 +33,7 @@ class OrderResource extends Resource
 
     public $snap_token;
 
+
     public static function form(Form $form): Form
     {
         return $form

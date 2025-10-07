@@ -41,6 +41,8 @@ class OrderResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('customer.name')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('orderItem.product.product_name')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('date_of_visit')
@@ -78,6 +80,14 @@ class OrderResource extends Resource
                 //
             ])
             ->actions([
+                Tables\Actions\Action::make('tutup tiket')
+                ->label('Tutup Tiket')
+                ->icon('heroicon-o-ticket')
+                ->color('info')
+                ->action(function ($record) {
+                    $record->ticket_status = 'terpakai';
+                    $record->save();
+                }),
                 Tables\Actions\ActionGroup::make([
                     Tables\Actions\EditAction::make(),
                     Tables\Actions\DeleteAction::make(),

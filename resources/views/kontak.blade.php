@@ -7,7 +7,7 @@
                 <!-- Hero Section -->
                 <div class="md:absolute w-full text-center mb-12 animate-fade-in-down pt-10 md:pt-25 z-10">
                     <h1
-                        class="text-5xl font-bold text-[#142e50] md:text-white mb-6 drop-shadow-lg montserrat hidden md:block ">
+                        class="text-5xl font-['Montserrat'] font-bold text-[#142e50] md:text-white mb-6 drop-shadow-lg montserrat hidden md:block ">
                         Hubungi Kami
                     </h1>
                     <p class="text-xl text-[#142e50] md:text-white/90 max-w-2xl mx-auto leading-relaxed">
@@ -27,11 +27,11 @@
             <!-- Main Content Card -->
             <div
                 class="relative md:top-[-160px] w-full bg-white/95 rounded-xl md:rounded-[50px] shadow-2xl overflow-hidden animate-fade-in-up">
-                <div class="grid grid-cols-1 md::grid-cols-5 gap-0">
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-0">
 
                     <!-- Contact Information -->
                     <div class="md:col-span-2 p-8 md:p-12 bg-gradient-to-br from-slate-50 to-gray-100">
-                        <h2 class="text-2xl font-bold text-gray-800 mb-8">Hubungi Kami</h2>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-8 font-['Montserrat']">Hubungi Kami</h2>
 
                         <!-- Email -->
                         <div class="flex items-center mb-8 group">
@@ -67,7 +67,8 @@
 
                         <!-- Social Media -->
                         <div class="mt-12">
-                            <h3 class="font-semibold text-gray-800 text-lg mb-6">Ikuti Sosial Media Kami</h3>
+                            <h3 class="font-semibold text-gray-800 text-lg mb-6 font-['Montserrat']">Ikuti Sosial Media Kami
+                            </h3>
                             <div class="flex space-x-3">
                                 <!-- Facebook -->
                                 <a href="#"
@@ -118,7 +119,7 @@
 
                     <!-- Contact Form -->
                     <div class="md:col-span-3 p-8 md:p-12 bg-white">
-                        <h2 class="text-2xl font-bold text-gray-800 mb-8">Kirim Kami Pesan</h2>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-8 font-['Montserrat']">Kirim Kami Pesan</h2>
 
                         <form class="space-y-6">
                             <!-- Name Field -->

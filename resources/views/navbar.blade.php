@@ -7,7 +7,7 @@
                 <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
                     <!-- Mobile menu button-->
                     <button type="button" command="--toggle" commandfor="mobile-menu"
-                        class="relative inline-flex items-center justify-center rounded-md p-2 text-[#142e50] hover:text-gray-600 focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-[#142e50] hover:text-gray-600 outline-2 -outline-offset-1 outline-indigo-500">
                         <span class="absolute -inset-0.5"></span>
                         <span class="sr-only">Open main menu</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
@@ -53,7 +53,7 @@
                             </svg>
                         </button>
 
-                        <el-disclosure id="profile-menu"
+                        <el-disclosure id="profile-menu" hidden
                             class="w-56 divide-y divide-gray-100 rounded-md bg-white shadow-lg outline-1 outline-black/5 transition transition-discrete absolute z-10 bottom-[-40px] right-0 [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
                             <div class="py-1">
                                 <form action="{{ route('logout') }}" method="POST" class="w-full">
